@@ -10,19 +10,26 @@ class App extends Component {
 
 		styles = {
 			mainContainer: {
-			flex: 1,
-			flexDirection: 'column',
-	    justifyContent: 'space-around',
-	    alignItems: 'center'
+				flex: 1,
+				flexDirection: 'column',
+		    justifyContent: 'space-around',
+		    alignItems: 'center'
+			},
+			buttonStyle: {
+				borderRadius: 4,
+		    borderWidth: 1,
+		    borderColor: 'black',
+		    paddingVertical: 10,
+		    paddingHorizontal: 20
 			}
 		};
 
-		const { mainContainer, textStyle, buttonStyle } = styles;
+		const { mainContainer, buttonStyle } = styles;
 
 		return (
 			<View style={mainContainer}>
 				<Header label="Plans" />
-				<Button> 
+				<Button styles={buttonStyle}> 
 					LOGIN
 				</Button>
 			</View>
