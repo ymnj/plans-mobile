@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
 import {View, Text } from 'react-native';
+import firebase from 'firebase';
 
-import { Header, Button } from './common';
+import config from '../config/firebase';
+
+import { Header, Button } from './components/common';
+import LoginForm from './components/LoginForm';
 
 
 class App extends Component {
 
-	render() {
+	componentWillMount() {
 
+  	firebase.initializeApp(config);
+
+	}
+	
+	render() {
 		styles = {
 			mainContainer: {
 				flex: 1,
@@ -29,9 +38,7 @@ class App extends Component {
 		return (
 			<View style={mainContainer}>
 				<Header label="Plans" />
-				<Button styles={buttonStyle}> 
-					LOGIN
-				</Button>
+				<LoginForm />
 			</View>
 		);
 	}
