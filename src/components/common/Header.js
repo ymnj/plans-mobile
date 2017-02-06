@@ -14,7 +14,6 @@ const Header = ({ label }) => {
 
 const styles = {
 	viewStyles: {
-		height: 60,
 		backgroundColor: 'steelblue',
 		justifyContent: 'center',
 		alignItems: 'center'

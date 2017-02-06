@@ -17,26 +17,8 @@ class App extends Component {
 	}
 	
 	render() {
-		styles = {
-			mainContainer: {
-				flex: 1,
-				flexDirection: 'column',
-		    justifyContent: 'space-around',
-		    alignItems: 'center'
-			},
-			buttonStyle: {
-				borderRadius: 4,
-		    borderWidth: 1,
-		    borderColor: 'black',
-		    paddingVertical: 10,
-		    paddingHorizontal: 20
-			}
-		};
-
-		const { mainContainer, buttonStyle } = styles;
-
 		return (
-			<View style={mainContainer}>
+			<View >
 				<Header label="Plans" />
 				<LoginForm />
 			</View>
